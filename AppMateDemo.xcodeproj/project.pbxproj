@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC2DD5A0477CE7FD6D4F7616 /* Pods_AppMateDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCBD68E2BE59EBEAB534364 /* Pods_AppMateDemo.framework */; };
 		FCCBFFDA27B671BC00A356A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBFFD927B671BC00A356A4 /* AppDelegate.swift */; };
 		FCCBFFDC27B671BC00A356A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBFFDB27B671BC00A356A4 /* SceneDelegate.swift */; };
 		FCCBFFDE27B671BC00A356A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBFFDD27B671BC00A356A4 /* ViewController.swift */; };
 		FCCBFFE127B671BC00A356A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCBFFDF27B671BC00A356A4 /* Main.storyboard */; };
 		FCCBFFE327B671BD00A356A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCBFFE227B671BD00A356A4 /* Assets.xcassets */; };
 		FCCBFFE627B671BD00A356A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCBFFE427B671BD00A356A4 /* LaunchScreen.storyboard */; };
+		FCF1B64F27C55E6B00688AFD /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF1B64E27C55E6B00688AFD /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		008E7DE9A44DBA6D1DD2FB18 /* Pods-AppMateDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppMateDemo.debug.xcconfig"; path = "Target Support Files/Pods-AppMateDemo/Pods-AppMateDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9D4EEC2770C327648089A3D1 /* Pods-AppMateDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppMateDemo.release.xcconfig"; path = "Target Support Files/Pods-AppMateDemo/Pods-AppMateDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FBCBD68E2BE59EBEAB534364 /* Pods_AppMateDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppMateDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCBFFD627B671BC00A356A4 /* AppMateDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMateDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCBFFD927B671BC00A356A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCCBFFDB27B671BC00A356A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		FCCBFFE227B671BD00A356A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCCBFFE527B671BD00A356A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCCBFFE727B671BD00A356A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCF1B64E27C55E6B00688AFD /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2DD5A0477CE7FD6D4F7616 /* Pods_AppMateDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FA1F0E3CC615B7145AD230A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBCBD68E2BE59EBEAB534364 /* Pods_AppMateDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		604F911E40E4EF747A64AF37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				008E7DE9A44DBA6D1DD2FB18 /* Pods-AppMateDemo.debug.xcconfig */,
+				9D4EEC2770C327648089A3D1 /* Pods-AppMateDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FCCBFFCD27B671BC00A356A4 = {
 			isa = PBXGroup;
 			children = (
 				FCCBFFD827B671BC00A356A4 /* AppMateDemo */,
 				FCCBFFD727B671BC00A356A4 /* Products */,
+				604F911E40E4EF747A64AF37 /* Pods */,
+				2FA1F0E3CC615B7145AD230A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +85,7 @@
 				FCCBFFD927B671BC00A356A4 /* AppDelegate.swift */,
 				FCCBFFDB27B671BC00A356A4 /* SceneDelegate.swift */,
 				FCCBFFDD27B671BC00A356A4 /* ViewController.swift */,
+				FCF1B64E27C55E6B00688AFD /* DetailsViewController.swift */,
 				FCCBFFDF27B671BC00A356A4 /* Main.storyboard */,
 				FCCBFFE227B671BD00A356A4 /* Assets.xcassets */,
 				FCCBFFE427B671BD00A356A4 /* LaunchScreen.storyboard */,
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCCBFFEA27B671BD00A356A4 /* Build configuration list for PBXNativeTarget "AppMateDemo" */;
 			buildPhases = (
+				03BAFA82B98916B98DD37744 /* [CP] Check Pods Manifest.lock */,
 				FCCBFFD227B671BC00A356A4 /* Sources */,
 				FCCBFFD327B671BC00A356A4 /* Frameworks */,
 				FCCBFFD427B671BC00A356A4 /* Resources */,
+				2A0B36962538087C887611C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +162,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03BAFA82B98916B98DD37744 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppMateDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A0B36962538087C887611C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppMateDemo/Pods-AppMateDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppMateDemo/Pods-AppMateDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppMateDemo/Pods-AppMateDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FCCBFFD227B671BC00A356A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +212,7 @@
 				FCCBFFDE27B671BC00A356A4 /* ViewController.swift in Sources */,
 				FCCBFFDA27B671BC00A356A4 /* AppDelegate.swift in Sources */,
 				FCCBFFDC27B671BC00A356A4 /* SceneDelegate.swift in Sources */,
+				FCF1B64F27C55E6B00688AFD /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +356,7 @@
 		};
 		FCCBFFEB27B671BD00A356A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 008E7DE9A44DBA6D1DD2FB18 /* Pods-AppMateDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,7 +375,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.atilsamancioglu.AppMateDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atilsamancioglu.AppTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -312,6 +385,7 @@
 		};
 		FCCBFFEC27B671BD00A356A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D4EEC2770C327648089A3D1 /* Pods-AppMateDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -330,7 +404,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.atilsamancioglu.AppMateDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atilsamancioglu.AppTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
