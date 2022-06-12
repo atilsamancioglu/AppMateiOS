@@ -93,11 +93,56 @@
                     <tabBarItem key="tabBarItem" title="My Products" image="square.and.arrow.down.on.square" catalog="system" id="cJR-6N-m1w"/>
                     <connections>
                         <outlet property="tableView" destination="qLP-8f-xvV" id="ekd-7D-3Nk"/>
+                        <segue destination="Iuh-fZ-Cvb" kind="show" identifier="toPurchaseDetailsVC" id="Pzr-Ec-fbM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nM8-zx-Gwe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1451" y="1566"/>
+        </scene>
+        <!--Purchase Details View Controller-->
+        <scene sceneID="aDx-2z-JMC">
+            <objects>
+                <viewController id="Iuh-fZ-Cvb" customClass="PurchaseDetailsViewController" customModule="AppMateDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AmO-Z5-HXr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Purchase Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eM-4o-JC8">
+                                <rect key="frame" x="70" y="267" width="275" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dQ-Cp-fQX">
+                                <rect key="frame" x="128" y="363" width="159" height="79"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Consume"/>
+                                <connections>
+                                    <action selector="consumeButtonClicked:" destination="Iuh-fZ-Cvb" eventType="touchUpInside" id="a1b-hd-G28"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JoU-It-vYh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JoU-It-vYh" firstAttribute="bottom" secondItem="8dQ-Cp-fQX" secondAttribute="bottom" constant="366" id="Glg-QG-wcU"/>
+                            <constraint firstItem="8eM-4o-JC8" firstAttribute="centerX" secondItem="8dQ-Cp-fQX" secondAttribute="centerX" id="IBV-o9-ugZ"/>
+                            <constraint firstItem="8eM-4o-JC8" firstAttribute="top" secondItem="JoU-It-vYh" secondAttribute="top" constant="267" id="NqG-nx-fkV"/>
+                            <constraint firstItem="8dQ-Cp-fQX" firstAttribute="top" secondItem="8eM-4o-JC8" secondAttribute="bottom" constant="60" id="cFY-05-fRX"/>
+                            <constraint firstItem="8dQ-Cp-fQX" firstAttribute="leading" secondItem="JoU-It-vYh" secondAttribute="leading" constant="128" id="n9W-rd-F5U"/>
+                            <constraint firstItem="8eM-4o-JC8" firstAttribute="centerX" secondItem="AmO-Z5-HXr" secondAttribute="centerX" id="ngV-Ll-b2f"/>
+                            <constraint firstItem="8eM-4o-JC8" firstAttribute="leading" secondItem="JoU-It-vYh" secondAttribute="leading" constant="70" id="wZb-qU-74e"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jJy-Sh-2s3"/>
+                    <connections>
+                        <outlet property="purchaseDescLabel" destination="8eM-4o-JC8" id="Ib4-r2-4uf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UP4-Y2-zsO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2266.666666666667" y="1565.625"/>
         </scene>
         <!--Store-->
         <scene sceneID="kVg-BC-p2w">

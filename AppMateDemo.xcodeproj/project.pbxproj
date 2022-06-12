@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CC2DD5A0477CE7FD6D4F7616 /* Pods_AppMateDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCBD68E2BE59EBEAB534364 /* Pods_AppMateDemo.framework */; };
 		FC27427C2856202800FC8DF2 /* PurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27427B2856202800FC8DF2 /* PurchasesViewController.swift */; };
+		FC27427E2856213900FC8DF2 /* PurchaseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27427D2856213900FC8DF2 /* PurchaseDetailsViewController.swift */; };
 		FCCBFFDA27B671BC00A356A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBFFD927B671BC00A356A4 /* AppDelegate.swift */; };
 		FCCBFFDC27B671BC00A356A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBFFDB27B671BC00A356A4 /* SceneDelegate.swift */; };
 		FCCBFFDE27B671BC00A356A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBFFDD27B671BC00A356A4 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		9D4EEC2770C327648089A3D1 /* Pods-AppMateDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppMateDemo.release.xcconfig"; path = "Target Support Files/Pods-AppMateDemo/Pods-AppMateDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FBCBD68E2BE59EBEAB534364 /* Pods_AppMateDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppMateDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC27427B2856202800FC8DF2 /* PurchasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesViewController.swift; sourceTree = "<group>"; };
+		FC27427D2856213900FC8DF2 /* PurchaseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseDetailsViewController.swift; sourceTree = "<group>"; };
 		FCCBFFD627B671BC00A356A4 /* AppMateDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMateDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCBFFD927B671BC00A356A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCCBFFDB27B671BC00A356A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				FCCBFFDD27B671BC00A356A4 /* ViewController.swift */,
 				FCF1B64E27C55E6B00688AFD /* DetailsViewController.swift */,
 				FC27427B2856202800FC8DF2 /* PurchasesViewController.swift */,
+				FC27427D2856213900FC8DF2 /* PurchaseDetailsViewController.swift */,
 				FCCBFFDF27B671BC00A356A4 /* Main.storyboard */,
 				FCCBFFE227B671BD00A356A4 /* Assets.xcassets */,
 				FCCBFFE427B671BD00A356A4 /* LaunchScreen.storyboard */,
@@ -220,6 +223,7 @@
 				FCCBFFDA27B671BC00A356A4 /* AppDelegate.swift in Sources */,
 				FC27427C2856202800FC8DF2 /* PurchasesViewController.swift in Sources */,
 				FCCBFFDC27B671BC00A356A4 /* SceneDelegate.swift in Sources */,
+				FC27427E2856213900FC8DF2 /* PurchaseDetailsViewController.swift in Sources */,
 				FCF1B64F27C55E6B00688AFD /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
