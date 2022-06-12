@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		CC2DD5A0477CE7FD6D4F7616 /* Pods_AppMateDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCBD68E2BE59EBEAB534364 /* Pods_AppMateDemo.framework */; };
+		FC27427C2856202800FC8DF2 /* PurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27427B2856202800FC8DF2 /* PurchasesViewController.swift */; };
 		FCCBFFDA27B671BC00A356A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBFFD927B671BC00A356A4 /* AppDelegate.swift */; };
 		FCCBFFDC27B671BC00A356A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBFFDB27B671BC00A356A4 /* SceneDelegate.swift */; };
 		FCCBFFDE27B671BC00A356A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBFFDD27B671BC00A356A4 /* ViewController.swift */; };
 		FCCBFFE127B671BC00A356A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCBFFDF27B671BC00A356A4 /* Main.storyboard */; };
 		FCCBFFE327B671BD00A356A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCBFFE227B671BD00A356A4 /* Assets.xcassets */; };
 		FCCBFFE627B671BD00A356A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCBFFE427B671BD00A356A4 /* LaunchScreen.storyboard */; };
+		FCDD56F627C6C55000CEC07C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDD56F527C6C55000CEC07C /* StoreKit.framework */; };
 		FCF1B64F27C55E6B00688AFD /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF1B64E27C55E6B00688AFD /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +23,7 @@
 		008E7DE9A44DBA6D1DD2FB18 /* Pods-AppMateDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppMateDemo.debug.xcconfig"; path = "Target Support Files/Pods-AppMateDemo/Pods-AppMateDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9D4EEC2770C327648089A3D1 /* Pods-AppMateDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppMateDemo.release.xcconfig"; path = "Target Support Files/Pods-AppMateDemo/Pods-AppMateDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FBCBD68E2BE59EBEAB534364 /* Pods_AppMateDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppMateDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC27427B2856202800FC8DF2 /* PurchasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesViewController.swift; sourceTree = "<group>"; };
 		FCCBFFD627B671BC00A356A4 /* AppMateDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMateDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCBFFD927B671BC00A356A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCCBFFDB27B671BC00A356A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +32,7 @@
 		FCCBFFE227B671BD00A356A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCCBFFE527B671BD00A356A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCCBFFE727B671BD00A356A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCDD56F527C6C55000CEC07C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FCF1B64E27C55E6B00688AFD /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -38,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC2DD5A0477CE7FD6D4F7616 /* Pods_AppMateDemo.framework in Frameworks */,
+				FCDD56F627C6C55000CEC07C /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,7 @@
 		2FA1F0E3CC615B7145AD230A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCDD56F527C6C55000CEC07C /* StoreKit.framework */,
 				FBCBD68E2BE59EBEAB534364 /* Pods_AppMateDemo.framework */,
 			);
 			name = Frameworks;
@@ -86,6 +92,7 @@
 				FCCBFFDB27B671BC00A356A4 /* SceneDelegate.swift */,
 				FCCBFFDD27B671BC00A356A4 /* ViewController.swift */,
 				FCF1B64E27C55E6B00688AFD /* DetailsViewController.swift */,
+				FC27427B2856202800FC8DF2 /* PurchasesViewController.swift */,
 				FCCBFFDF27B671BC00A356A4 /* Main.storyboard */,
 				FCCBFFE227B671BD00A356A4 /* Assets.xcassets */,
 				FCCBFFE427B671BD00A356A4 /* LaunchScreen.storyboard */,
@@ -211,6 +218,7 @@
 			files = (
 				FCCBFFDE27B671BC00A356A4 /* ViewController.swift in Sources */,
 				FCCBFFDA27B671BC00A356A4 /* AppDelegate.swift in Sources */,
+				FC27427C2856202800FC8DF2 /* PurchasesViewController.swift in Sources */,
 				FCCBFFDC27B671BC00A356A4 /* SceneDelegate.swift in Sources */,
 				FCF1B64F27C55E6B00688AFD /* DetailsViewController.swift in Sources */,
 			);
@@ -361,8 +369,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7CZ8CAJJXF;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 7SH627DBA4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppMateDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -370,11 +378,12 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atilsamancioglu.AppTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -390,8 +399,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7CZ8CAJJXF;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 7SH627DBA4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppMateDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -399,11 +408,12 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atilsamancioglu.AppTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

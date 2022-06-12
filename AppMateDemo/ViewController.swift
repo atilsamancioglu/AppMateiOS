@@ -20,17 +20,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 
         
         PurchaseClient.shared.getProducts { products, error in
             if let products = products {
-                self.myProducts = products
+               self.myProducts = products
                 print(products)
+                self.tableView.reloadData()
             } else {
                 print(error)
             }
         }
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+
 
     }
     
@@ -61,7 +65,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         content.secondaryText = currentProductPrice
 
         cell.contentConfiguration = content
-        
         
         return cell
     }
