@@ -103,12 +103,12 @@
         <!--Purchase Details View Controller-->
         <scene sceneID="aDx-2z-JMC">
             <objects>
-                <viewController id="Iuh-fZ-Cvb" customClass="PurchaseDetailsViewController" customModule="AppMateDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="purchaseDetailsVC" id="Iuh-fZ-Cvb" customClass="PurchaseDetailsViewController" customModule="AppMateDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AmO-Z5-HXr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Purchase Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eM-4o-JC8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Use This Purchase?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eM-4o-JC8">
                                 <rect key="frame" x="70" y="267" width="275" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>

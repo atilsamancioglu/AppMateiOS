@@ -14,8 +14,7 @@ class PurchaseDetailsViewController: UIViewController {
     @IBOutlet weak var purchaseDescLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        purchaseDescLabel.text = chosenProduct?.description
+        print(chosenProduct)
     }
     
     @IBAction func consumeButtonClicked(_ sender: Any) {
@@ -23,7 +22,7 @@ class PurchaseDetailsViewController: UIViewController {
         
         PurchaseClient.shared.consumePurchaseWithPurchaseToken(chosenProduct!.purchaseToken) { response, error in
             if let response = response, response.result!.success {
-                print(response)
+                self.dismiss(animated: true)
             } else {
                 print(error)
             }
