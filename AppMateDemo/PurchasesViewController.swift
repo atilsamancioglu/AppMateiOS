@@ -15,7 +15,7 @@ class PurchasesViewController: UIViewController, UITableViewDataSource,UITableVi
     var selectedProduct : PurchaseInfo?
     var productList = [Product]()
     var purchaseDetailsVC : PurchaseDetailsViewController? = nil
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,60 +27,95 @@ class PurchasesViewController: UIViewController, UITableViewDataSource,UITableVi
         
         
         purchaseDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "purchaseDetailsVC") as? PurchaseDetailsViewController
-        
+   
 
     }
     
     func presentationControllerWillDismiss(_ presentationController: UIPresentationController) {
-        getPurchasesAndDisplay()
+ 
+             getPurchasesAndDisplay()
+        //standardDisplay()
+
+        
     }
     
 
     
     override func viewWillAppear(_ animated: Bool) {
     
-        getPurchasesAndDisplay()
+             getPurchasesAndDisplay()
+        //standardDisplay()
         
         
     }
     
-    private func getPurchasesAndDisplay() {
-        
-        productList.removeAll(keepingCapacity: false)
-        purchaseList.removeAll(keepingCapacity: false)
-        
-
+    private func standardDisplay() {
         PurchaseClient.shared.getCurrentPurchases { purchases, error in
             if let purchases = purchases {
                 self.purchaseList = purchases
-                
                 let productIds = purchases.map {$0.productId}
-                
                 PurchaseClient.shared.getProductsWithIdList(productIds) { products, error in
-
-                        if error != nil {
-                            print(error?.localizedDescription)
-                        } else {
-                            if let products = products {
-                                self.productList = products
-
-                            }
-
-                        }
-                   
+                    if let products = products {
+                        self.productList = products
+                        self.tableView.reloadData()
+                    }
+                    
                 }
-             
-                self.tableView.reloadData()
-               
+            }
+            
+            
+        }
+    }
+    
+    private func getPurchases(completion: @escaping([PurchaseInfo]) -> Void ) {
+        purchaseList.removeAll(keepingCapacity: false)
+
+        PurchaseClient.shared.getCurrentPurchases { purchases, error in
+            print("first async executed")
+            if let purchases = purchases {
+                self.purchaseList = purchases
+                completion(purchases)
             }
            
         }
-        
+    }
+    
+    private func getProducts(purchases:[PurchaseInfo], completion: @escaping([Product]) -> Void) {
+        productList.removeAll(keepingCapacity: false)
 
+        let productIds = purchases.map {$0.productId}
+
+        PurchaseClient.shared.getProductsWithIdList(productIds) { products, error in
+            print("second async executed")
+
+                if error != nil {
+                    print(error?.localizedDescription)
+                } else {
+                    if let products = products {
+                        self.productList = products
+                        completion(products)
+
+                    }
+                }
+        }
+     
+    }
+    
+    private func getPurchasesAndDisplay()  {
+        print("getpurchasesanddisplay executed")
+        getPurchases { purchases in
+            self.getProducts(purchases: purchases) { products in
+                print("products completion: \(products)")
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return purchaseList.count
+        return productList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
