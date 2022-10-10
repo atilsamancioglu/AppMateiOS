@@ -1,0 +1,16 @@
+PODS:
+  - appmate-beta (1.0.5-beta4)
+
+DEPENDENCIES:
+  - appmate-beta (= 1.0.5-beta4)
+
+SPEC REPOS:
+  trunk:
+    - appmate-beta
+
+SPEC CHECKSUMS:
+  appmate-beta: a33c1c3eb854592965a7c5f8983996a8fccc53db
+
+PODFILE CHECKSUM: b86370852b3d64b258bef1ed01f1a4188ebed689
+
+COCOAPODS: 1.11.3

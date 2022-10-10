@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		D49E1832F5CBACCC205E1953D60E7576 /* appmate-beta */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BE27E6E13D07D0E267B2F4C29379D36D /* Build configuration list for PBXAggregateTarget "appmate-beta" */;
+			buildPhases = (
+				29867FC395D91C1890774FC74CF2BFD3 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = "appmate-beta";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		22A0F44B3B51E620191C9A6C51B1D366 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		2A34E2374DA1DB907806387E75E9E221 /* Pods-AppMateDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4EC371FB1B8BBE9F7C91D8687EDB1C5 /* Pods-AppMateDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DCD55C8A3BED7DB798D342299059632 /* Pods-AppMateDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8F80564495F792BFC579025925F0F3 /* Pods-AppMateDemo-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		614862E8B2FDB9E69DDADB2A670E6B72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D49E1832F5CBACCC205E1953D60E7576;
+			remoteInfo = "appmate-beta";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11EA76F94C0D3E3615A84DED07B18889 /* appmate-beta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "appmate-beta.release.xcconfig"; sourceTree = "<group>"; };
+		202395BC55A5670037504DE730BDE0AA /* Pods-AppMateDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppMateDemo-Info.plist"; sourceTree = "<group>"; };
+		45C1AC178970F326774271C1F92760D3 /* appmate.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = appmate.xcframework; sourceTree = "<group>"; };
+		4B8F80564495F792BFC579025925F0F3 /* Pods-AppMateDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppMateDemo-dummy.m"; sourceTree = "<group>"; };
+		4D3EEE60315A649DB3851C847424F85F /* Pods-AppMateDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppMateDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		528DCE226C86659D20488AAA21430262 /* Pods-AppMateDemo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AppMateDemo"; path = Pods_AppMateDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70AE0821A3A20E8452170B3ED62CBE66 /* appmate-beta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "appmate-beta.debug.xcconfig"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		73C1F42AD1A33B60EE23B3ABBB6ADD14 /* Pods-AppMateDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AppMateDemo-frameworks.sh"; sourceTree = "<group>"; };
+		9236BB3D91AB8A4D1EC11D1758C3141E /* Pods-AppMateDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AppMateDemo.modulemap"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C4EC371FB1B8BBE9F7C91D8687EDB1C5 /* Pods-AppMateDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AppMateDemo-umbrella.h"; sourceTree = "<group>"; };
+		F13A1B5771FEA977FE40098E1E272DDD /* Pods-AppMateDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppMateDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F2914A5B33B34A537AEB3F18564E4723 /* Pods-AppMateDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppMateDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F36953EC0A65F920BD5896815AD8DC9A /* appmate-beta-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "appmate-beta-xcframeworks.sh"; sourceTree = "<group>"; };
+		F5BE708610DFF80A43843EFECBFF7BE9 /* Pods-AppMateDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppMateDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87A73354521A2B9815161A2DED0675EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A0F44B3B51E620191C9A6C51B1D366 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		007452FB975FDBF28D061AD0829232C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B698B7D0BA93D573FD9A8AEE2FF55863 /* appmate-beta */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		45BDB6B5307F5EC9C865B616462FC9AA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F36953EC0A65F920BD5896815AD8DC9A /* appmate-beta-xcframeworks.sh */,
+				70AE0821A3A20E8452170B3ED62CBE66 /* appmate-beta.debug.xcconfig */,
+				11EA76F94C0D3E3615A84DED07B18889 /* appmate-beta.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/appmate-beta";
+			sourceTree = "<group>";
+		};
+		5095136A3F910B157C611D25CDB68D34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				528DCE226C86659D20488AAA21430262 /* Pods-AppMateDemo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		74CE4A534AF5EE447D6E932CE602FF09 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7AC999B62CA0948E1D3270B7DA30E40A /* Pods-AppMateDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7AC999B62CA0948E1D3270B7DA30E40A /* Pods-AppMateDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9236BB3D91AB8A4D1EC11D1758C3141E /* Pods-AppMateDemo.modulemap */,
+				4D3EEE60315A649DB3851C847424F85F /* Pods-AppMateDemo-acknowledgements.markdown */,
+				F5BE708610DFF80A43843EFECBFF7BE9 /* Pods-AppMateDemo-acknowledgements.plist */,
+				4B8F80564495F792BFC579025925F0F3 /* Pods-AppMateDemo-dummy.m */,
+				73C1F42AD1A33B60EE23B3ABBB6ADD14 /* Pods-AppMateDemo-frameworks.sh */,
+				202395BC55A5670037504DE730BDE0AA /* Pods-AppMateDemo-Info.plist */,
+				C4EC371FB1B8BBE9F7C91D8687EDB1C5 /* Pods-AppMateDemo-umbrella.h */,
+				F13A1B5771FEA977FE40098E1E272DDD /* Pods-AppMateDemo.debug.xcconfig */,
+				F2914A5B33B34A537AEB3F18564E4723 /* Pods-AppMateDemo.release.xcconfig */,
+			);
+			name = "Pods-AppMateDemo";
+			path = "Target Support Files/Pods-AppMateDemo";
+			sourceTree = "<group>";
+		};
+		8A96AC715EF46B715EEDD7695FD71826 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45C1AC178970F326774271C1F92760D3 /* appmate.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B698B7D0BA93D573FD9A8AEE2FF55863 /* appmate-beta */ = {
+			isa = PBXGroup;
+			children = (
+				8A96AC715EF46B715EEDD7695FD71826 /* Frameworks */,
+				45BDB6B5307F5EC9C865B616462FC9AA /* Support Files */,
+			);
+			name = "appmate-beta";
+			path = "appmate-beta";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				007452FB975FDBF28D061AD0829232C5 /* Pods */,
+				5095136A3F910B157C611D25CDB68D34 /* Products */,
+				74CE4A534AF5EE447D6E932CE602FF09 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9876EB364FDAE38D59596320D4C453CF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A34E2374DA1DB907806387E75E9E221 /* Pods-AppMateDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0F0EF6AB8DDC50E91C053762F3C7737C /* Pods-AppMateDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6684494766C1A45E70344EFA2C5BF572 /* Build configuration list for PBXNativeTarget "Pods-AppMateDemo" */;
+			buildPhases = (
+				9876EB364FDAE38D59596320D4C453CF /* Headers */,
+				BCB432E2052A1D7A3B9E90034913118A /* Sources */,
+				87A73354521A2B9815161A2DED0675EE /* Frameworks */,
+				3778EE2120838D93284A4CBA21DDB373 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61D118E367D374F368A4725FF28F4B69 /* PBXTargetDependency */,
+			);
+			name = "Pods-AppMateDemo";
+			productName = Pods_AppMateDemo;
+			productReference = 528DCE226C86659D20488AAA21430262 /* Pods-AppMateDemo */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 5095136A3F910B157C611D25CDB68D34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D49E1832F5CBACCC205E1953D60E7576 /* appmate-beta */,
+				0F0EF6AB8DDC50E91C053762F3C7737C /* Pods-AppMateDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3778EE2120838D93284A4CBA21DDB373 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29867FC395D91C1890774FC74CF2BFD3 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/appmate-beta/appmate-beta-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/appmate-beta/appmate-beta-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/appmate-beta/appmate-beta-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCB432E2052A1D7A3B9E90034913118A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DCD55C8A3BED7DB798D342299059632 /* Pods-AppMateDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61D118E367D374F368A4725FF28F4B69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "appmate-beta";
+			target = D49E1832F5CBACCC205E1953D60E7576 /* appmate-beta */;
+			targetProxy = 614862E8B2FDB9E69DDADB2A670E6B72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2E18B24D146D8A9345A90C45194DEE4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		797BD6F4F2D4F4438F27A3A34B7C43D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70AE0821A3A20E8452170B3ED62CBE66 /* appmate-beta.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86BE1351B49B988D1DA1115B10F13C04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F13A1B5771FEA977FE40098E1E272DDD /* Pods-AppMateDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AppMateDemo/Pods-AppMateDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AppMateDemo/Pods-AppMateDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DDAF4163EC0FDA482D9E6F94EAFD728 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11EA76F94C0D3E3615A84DED07B18889 /* appmate-beta.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5C08B03B6CE45743372B87E844A999A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2914A5B33B34A537AEB3F18564E4723 /* Pods-AppMateDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AppMateDemo/Pods-AppMateDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AppMateDemo/Pods-AppMateDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EDE13D2DD3F94A79B5CE4331571BDFFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E18B24D146D8A9345A90C45194DEE4F /* Debug */,
+				EDE13D2DD3F94A79B5CE4331571BDFFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6684494766C1A45E70344EFA2C5BF572 /* Build configuration list for PBXNativeTarget "Pods-AppMateDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86BE1351B49B988D1DA1115B10F13C04 /* Debug */,
+				C5C08B03B6CE45743372B87E844A999A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE27E6E13D07D0E267B2F4C29379D36D /* Build configuration list for PBXAggregateTarget "appmate-beta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				797BD6F4F2D4F4438F27A3A34B7C43D2 /* Debug */,
+				8DDAF4163EC0FDA482D9E6F94EAFD728 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

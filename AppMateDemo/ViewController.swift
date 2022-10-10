@@ -17,22 +17,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        print("view did load executed")
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 
         
         PurchaseClient.shared.getProducts { products, error in
             if let products = products {
                self.myProducts = products
                 print(products)
-                self.tableView.reloadData()
+                DispatchQueue.main.asyncAfter(deadline: .now()+0.2, execute: {
+                    self.tableView.reloadData()
+                })
             } else {
                 print(error)
             }
         }
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
 
 

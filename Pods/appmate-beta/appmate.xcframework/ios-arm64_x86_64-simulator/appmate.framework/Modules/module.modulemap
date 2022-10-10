@@ -1,0 +1,11 @@
+framework module appmate {
+  umbrella header "appmate.h"
+
+  export *
+  module * { export * }
+}
+
+module appmate.Swift {
+    header "appmate-Swift.h"
+    requires objc
+}

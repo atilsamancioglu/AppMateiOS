@@ -53,6 +53,7 @@ class PurchasesViewController: UIViewController, UITableViewDataSource,UITableVi
         PurchaseClient.shared.getCurrentPurchases { purchases, error in
             if let purchases = purchases {
                 self.purchaseList = purchases
+                
                 let productIds = purchases.map {$0.productId}
                 PurchaseClient.shared.getProductsWithIdList(productIds) { products, error in
                     if let products = products {
@@ -106,9 +107,9 @@ class PurchasesViewController: UIViewController, UITableViewDataSource,UITableVi
         getPurchases { purchases in
             self.getProducts(purchases: purchases) { products in
                 print("products completion: \(products)")
-                DispatchQueue.main.async {
+                DispatchQueue.main.asyncAfter(deadline: .now()+0.2, execute: {
                     self.tableView.reloadData()
-                }
+                })
             }
         }
         
