@@ -25,11 +25,11 @@ class DetailsViewController: UIViewController {
         if let chosenProduct = chosenProduct {
             PurchaseClient.shared.makePurchase(with: chosenProduct) { purchaseResult, purchaseCode in
                 if purchaseResult != nil {
-                    print(purchaseResult?.purchaseCode)
-                    print(purchaseResult?.description)
-                    print(purchaseResult.debugDescription)
-                    print(purchaseResult?.purchaseInfo)
-                    self.dismiss(animated: true)
+                    
+                    self.navigationController?.popToRootViewController(animated: true)
+       
+                    
+
                 } else {
                     //print(purchaseCode.description)
                 }

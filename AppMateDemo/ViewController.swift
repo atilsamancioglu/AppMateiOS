@@ -9,50 +9,64 @@ import UIKit
 import appmate
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    
     @IBOutlet weak var tableView: UITableView!
     
-    var myProducts = [Product]()
-    var selectedProduct : Product?
+    @IBOutlet weak var purchasedProductLabel: UILabel!
+    var myProductsFromStore = [Product]()
+    var selectedProductToBePurchased : Product?
     
+    var purchaseList = [PurchaseInfo]()
+    var productList = [Product]()
+    var currentPurchased : PurchaseInfo?
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("view did load executed")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 
         
+        //get products from store
         PurchaseClient.shared.getProducts { products, error in
             if let products = products {
-               self.myProducts = products
+               self.myProductsFromStore = products
                 print(products)
                 DispatchQueue.main.asyncAfter(deadline: .now()+0.2, execute: {
                     self.tableView.reloadData()
                 })
             } else {
-                print(error)
+                print(error?.localizedDescription as Any)
             }
         }
         
-        
-
+        //get purchased products and display
+        getPurchasesAndDisplay()
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("view will appear executed")
+        
+        getPurchasesAndDisplay()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myProducts.count
+        return myProductsFromStore.count
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailsVC" {
             let destinationVC = segue.destination as! DetailsViewController
-            destinationVC.chosenProduct = selectedProduct
+            destinationVC.chosenProduct = selectedProductToBePurchased
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedProduct = myProducts[indexPath.row]
+        selectedProductToBePurchased = myProductsFromStore[indexPath.row]
         self.performSegue(withIdentifier: "toDetailsVC", sender: nil)
     }
     
@@ -60,17 +74,78 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
 
-        let currentProduct = myProducts[indexPath.row]
+        let currentProduct = myProductsFromStore[indexPath.row]
         let currentProductName = currentProduct.productLocales?.first?.productName
         let currentProductPrice = currentProduct.appleActivePriceDetail?.price
         content.text = currentProductName
         content.secondaryText = currentProductPrice
-
         cell.contentConfiguration = content
         
         return cell
     }
 
+    @IBAction func consumeButtonClicked(_ sender: Any) {
+        if currentPurchased != nil {
+            
+            PurchaseClient.shared.consumePurchaseWithPurchaseToken(currentPurchased!.purchaseToken) { response, error in
+                if let response = response, response.result!.success {
+                    self.purchasedProductLabel.text = "Ürün Başarıyla Kullanıldı"
+                } else {
+                    print(error)
+                }
+            }
+        }
+    }
+    
+    private func getProducts(purchases:[PurchaseInfo], completion: @escaping([Product]) -> Void) {
+        productList.removeAll(keepingCapacity: false)
 
+        let productIds = purchases.map {$0.productId}
+
+        PurchaseClient.shared.getProductsWithIdList(productIds) { products, error in
+            print("second async executed")
+
+                if error != nil {
+                    print(error?.localizedDescription)
+                } else {
+                    if let products = products {
+                        self.productList = products
+                        completion(products)
+
+                    }
+                }
+        }
+     
+    }
+    
+    private func getPurchases(completion: @escaping([PurchaseInfo]) -> Void ) {
+        purchaseList.removeAll(keepingCapacity: false)
+
+        PurchaseClient.shared.getCurrentPurchases { purchases, error in
+            print("first async executed")
+            if let purchases = purchases {
+                self.purchaseList = purchases
+                completion(purchases)
+            }
+           
+        }
+    }
+    
+    private func getPurchasesAndDisplay()  {
+    
+        print("getpurchasesanddisplay executed")
+            self.getPurchases { purchases in
+            self.currentPurchased = purchases.first
+            //self.purchasedProductLabel.text = self.currentPurchased?.description
+            self.getProducts(purchases: purchases) { products in
+                print("products completion: \(products)")
+                DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
+                    self.purchasedProductLabel.text = products.first?.productLocales?.first?.productName
+                })
+            }
+        }
+        
+    }
+    
 }
 
