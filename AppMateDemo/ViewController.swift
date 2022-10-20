@@ -49,7 +49,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("view will appear executed")
         
         getPurchasesAndDisplay()
     }
