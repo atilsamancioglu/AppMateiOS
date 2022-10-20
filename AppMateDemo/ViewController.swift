@@ -7,6 +7,7 @@
 
 import UIKit
 import appmate
+import Combine
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -17,18 +18,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var myProductsFromStore = [Product]()
     var selectedProductToBePurchased : Product?
     
-    var purchaseList = [PurchaseInfo]()
-    var productList = [Product]()
     var currentPurchased : PurchaseInfo?
-    
+    var myViewModel = MyViewModel()
+    var cancellableBag = Set<AnyCancellable>()
 
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        myViewModel.getPurchasesAndDisplay()
 
+      
         
         //get products from store
         PurchaseClient.shared.getProducts { products, error in
@@ -44,14 +48,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         //get purchased products and display
-        getPurchasesAndDisplay()
+        
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         print("view will appear executed")
         
-        getPurchasesAndDisplay()
+        myViewModel.getPurchasesAndDisplay()
+        myViewModel.$purchasedProduct.sink { purchasedProduct in
+            self.purchasedProductLabel.text = purchasedProduct
+        }.store(in: &cancellableBag)
+        
+        myViewModel.$purcasedInfo.sink { purchaseInfo in
+            self.currentPurchased = purchaseInfo
+        }.store(in: &cancellableBag)
+        
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -89,13 +102,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             PurchaseClient.shared.consumePurchaseWithPurchaseToken(currentPurchased!.purchaseToken) { response, error in
                 if let response = response, response.result!.success {
-                    self.purchasedProductLabel.text = "Ürün Başarıyla Kullanıldı"
+                    DispatchQueue.main.async {
+                        self.purchasedProductLabel.text = "Ürün Başarıyla Kullanıldı"
+
+                    }
                 } else {
                     print(error)
                 }
             }
         }
     }
+   
+    
+    
+}
+
+
+class MyViewModel : ObservableObject {
+    @Published var purchasedProduct : String = ""
+    @Published var purcasedInfo : PurchaseInfo?
+    
+    private var purchaseList = [PurchaseInfo]()
+    private var productList = [Product]()
+
     
     private func getProducts(purchases:[PurchaseInfo], completion: @escaping([Product]) -> Void) {
         productList.removeAll(keepingCapacity: false)
@@ -131,16 +160,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    private func getPurchasesAndDisplay()  {
+    func getPurchasesAndDisplay()  {
     
         print("getpurchasesanddisplay executed")
             self.getPurchases { purchases in
-            self.currentPurchased = purchases.first
+                self.purcasedInfo = purchases.first
             //self.purchasedProductLabel.text = self.currentPurchased?.description
             self.getProducts(purchases: purchases) { products in
                 print("products completion: \(products)")
                 DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
-                    self.purchasedProductLabel.text = products.first?.productLocales?.first?.productName
+                    self.purchasedProduct = products.first?.productLocales?.first?.productName ?? ""
                 })
             }
         }
@@ -148,4 +177,3 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
 }
-

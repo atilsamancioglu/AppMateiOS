@@ -25,8 +25,10 @@ class DetailsViewController: UIViewController {
         if let chosenProduct = chosenProduct {
             PurchaseClient.shared.makePurchase(with: chosenProduct) { purchaseResult, purchaseCode in
                 if purchaseResult != nil {
-                    
-                    self.navigationController?.popToRootViewController(animated: true)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                        self.navigationController?.popToRootViewController(animated: true)
+
+                      }
        
                     
 
